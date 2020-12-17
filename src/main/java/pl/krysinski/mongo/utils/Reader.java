@@ -1,5 +1,6 @@
 package pl.krysinski.mongo.utils;
 
+import org.springframework.stereotype.Component;
 import pl.krysinski.mongo.model.Gender;
 import pl.krysinski.mongo.model.User;
 
@@ -10,7 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Component
 public class Reader {
 
     public List<User> readData() throws IOException {
