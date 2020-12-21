@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface UserService {
 
-    List<User> addAll() throws IOException;
+    void addAll() throws IOException;
     List<User> findAll();
 }

@@ -23,11 +23,10 @@ public class UserServiceImpl implements UserService{
         this.csvReader = csvReader;
     }
 
-//    @EventListener(ApplicationReadyEvent.class)
     @Override
-    public List<User> addAll() throws IOException {
+    public void addAll() throws IOException {
         List<User> usersList = csvReader.readData();
-        return userRepo.saveAll(usersList);
+        userRepo.saveAll(usersList);
     }
 
     @Override
@@ -35,9 +34,4 @@ public class UserServiceImpl implements UserService{
         return userRepo.findAll();
     }
 
-//    @EventListener(ApplicationReadyEvent.class)
-//    public void printAll(){
-//        findAll().forEach(System.out::println);
-//
-//    }
 }

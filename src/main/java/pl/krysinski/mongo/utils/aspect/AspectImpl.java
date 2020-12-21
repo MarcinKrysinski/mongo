@@ -1,4 +1,4 @@
-package pl.krysinski.mongo.aspect;
+package pl.krysinski.mongo.utils.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
