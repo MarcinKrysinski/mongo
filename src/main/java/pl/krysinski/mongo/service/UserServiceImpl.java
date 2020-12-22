@@ -24,9 +24,9 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public void addAll() throws IOException {
+    public List<User> addAll() throws IOException {
         List<User> usersList = csvReader.readData();
-        userRepo.saveAll(usersList);
+        return userRepo.saveAll(usersList);
     }
 
     @Override
